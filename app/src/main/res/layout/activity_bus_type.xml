@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/_5dp"
+            android:drawableStart="@drawable/seat_occupied"
+            android:gravity="center_vertical"
+            android:text="BOOKED" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/_5dp"
+            android:drawableStart="@drawable/seat_selected"
+            android:gravity="center_vertical"
+            android:text="SELECTING" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/_5dp"
+            android:drawableStart="@drawable/seat_empty"
+            android:gravity="center_vertical"
+            android:text="EMPTY" />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewBus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fotter"
+        android:layout_below="@+id/toolbar"
+        android:columnWidth="30dp"
+        android:gravity="center"
+        android:listSelector="@color/transparent"
+        android:numColumns="5" />
+  <!--  <GridView
+        android:id="@+id/busGridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fotter"
+        android:layout_below="@+id/toolbar"
+        android:columnWidth="30dp"
+        android:gravity="center"
+        android:listSelector="@color/transparent"
+        android:numColumns="5" />-->
+
+    <RelativeLayout
+        android:id="@+id/fotter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/White"
+        android:padding="@dimen/_5dp">
+
+        <TextView
+            android:id="@+id/selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selected Seat"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/seatNoTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/selected"
+            android:text="20,30"
+            android:textColor="@color/Black_trans" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp">
+
+            <TextView
+                android:id="@+id/totalFare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Fare"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <TextView
+                android:id="@+id/totalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/totalFare"
+                android:layout_centerHorizontal="true"
+                android:text="300"
+                android:textColor="@color/Black_trans" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

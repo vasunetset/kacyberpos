@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="@dimen/dp_3"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/from_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kampala to Mbarara"
+        android:textColor="@color/common_text_color" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/from_to"
+        android:gravity="right"
+        android:text="UGX 15000"
+        android:textColor="@color/common_btn_bg_color" />
+
+    <TextView
+        android:id="@+id/bus_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/from_to"
+        android:text="Global Coaches"
+        android:textColor="@color/common_text_color" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bus_size"
+        android:text="DEP：12:00AM Wed. 19th Jul 2017"
+        android:textColor="@color/common_text_color" />
+
+    <TextView
+        android:id="@+id/tv_passenger_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time"
+        android:text="Name：First Name Last Name" />
+
+    <TextView
+        android:id="@+id/document_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_passenger_name"
+        android:text="Docunment Id: CM123123421RMUF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/document_id"
+        android:layout_marginTop="@dimen/dp_5">
+
+        <include
+            layout="@layout/common_line_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1px" />
+    </LinearLayout>
+</RelativeLayout>

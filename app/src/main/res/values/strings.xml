@@ -1,0 +1,182 @@
+<resources>
+    <!-- TODO: 中英文翻译-->
+    <string name="app_name">KaCyber POS</string>
+
+    <string name="activity_title_login">Log In</string>
+    <string name="activity_title_main">Home</string>
+    <string name="activity_title_account">Account</string>
+    <string name="activity_title_manual">Manual</string>
+    <string name="activity_title_quick_sale">Quick Sale</string>
+    <string name="activity_title_history">History</string>
+    <string name="activity_title_scan">Scan</string>
+    <string name="activity_title_notifications">Notifications</string>
+    <string name="activity_title_ticket">Ticket</string>
+    <string name="default_notification_channel_id">com.kacyber.pos</string>
+
+    <string name="search">Search</string>
+    <string name="hint">Hint</string>
+    <string name="cancel">Cancel</string>
+    <string name="ensure">Ensure</string>
+    <string name="done">Done</string>
+    <string name="file_provider_authority" translatable="false">com.kacyber.pos</string>
+    <string name="out_of_memory">Out Of Memory</string>
+    <string name="choose_image_source">Choose Image Resource</string>
+    <string name="please_relaunch">"Please relaunch "</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="menu_clear">Clear</string>
+    <string name="menu_done">Done</string>
+
+    <string name="select_city">Select City</string>
+    <string name="departure">Departure</string>
+    <string name="date">Tue 18 Jul</string>
+    <string name="passenger">Passenger</string>
+    <string name="hotline_email">"Hotline &#038; Email"</string>
+    <string name="email">E-mail</string>
+    <string name="login_hint">Username or Email</string>
+    <string name="password_hint">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="text_login">Sign In</string>
+    <string name="network_err">network error</string>
+    <string name="exit">Exit</string>
+    <string name="qr_scan">Scan</string>
+    <string name="button_ok">OK</string>
+    <string name="not_sufficient_permissions">Not sufficient permissions for this action\ngoto Settings>Apps>%1$s>Permissions</string>
+
+    <string name="main_ticket">MAIN TICKET</string>
+    <string name="sub_ticket">SUB TICKET</string>
+
+    <string name="msg_camera_framework_bug">Sorry, the Android camera encountered a problem. You may need to restart the device.</string>
+
+    <string name="dialog_title_get_camera_permission">获取相机权限</string>
+    <string name="dialog_login">正在登录</string>
+
+    <string name="btn_print">Print</string>
+    <string name="btn_needless">No Receipt</string>
+    <string name="btn_logout">Logout</string>
+
+    <string name="toast_camera_not_access">相机未授权</string>
+    <string name="toast_not_allow_this_uses_permission">未开启权限不可使用该功能</string>
+    <string name="toast_refreshing">正在刷新</string>
+    <string name="toast_refresh_done">刷新完成</string>
+    <string name="toast_scan_failed">Scan failed!</string>
+    <string name="toast_printing">Printing……</string>
+    <string name="toast_createTicket">Please Wait Ticket Creating……</string>
+    <string name="toast_input_code_please">请输入Code</string>
+    <string name="toast_account_is_empty">Please enter your username or email</string>
+    <string name="toast_password_is_empty">Please enter your password</string>
+    <string name="toast_account_error">Incorrect username or email format</string>
+    <string name="toast_password_error">Bad password format</string>
+    <string name="toast_download_not_correct">下载地址不合法</string>
+    <string name="toast_network_not_avaliable">网络连接不可用</string>
+    <string name="toast_is_lastest_version">已经是最新的版本了</string>
+    <string name="toast_not_allow_enter">暂未开放使用</string>
+    <string name="toast_login_suc">登录成功</string>
+    <string name="tv_sub_ticket">SUB TICKET</string>
+    <string name="tv_from">From</string>
+    <string name="tv_to">To</string>
+    <string name="tv_departure_time">DEPARTURE TIME</string>
+    <string name="tv_expected_arrival_time">EXPECTED ARRIVAL TIME</string>
+    <string name="tv_passenger_name">PASSENGER NAME</string>
+    <string name="tv_seat">SEAT</string>
+    <string name="tv_id_no">ID NO:</string>
+    <string name="tv_class">CLASS</string>
+    <string name="tv_number_plate">PLATE NO.</string>
+    <string name="tv_route">ROUTE</string>
+    <string name="tv_discount">DISCOUNT</string>
+    <string name="tv_terms_and_conditions">Terms and Conditions</string>
+    <string name="tv_please_arrive_atleast_30_minutes_before_depature">Please arrive atleast 30 minutes before depature</string>
+    <string name="tv_goods_carried_on_the_bus_are_at_owner_s_risk">Goods carried on the bus are at owner’s risk</string>
+    <string name="tv_contact_the_bus_operator_for_more_information_on_other_terms_and_conditons">Contact the bus operator for more information on other terms and conditons</string>
+    <string name="tv_issuing_officer">ISSUING OFFICER</string>
+    <string name="tv_booking_date">BOOKING DATE</string>
+    <string name="tv_ticket_price">FARE</string>
+    <string name="tv_pin">PIN</string>
+    <string name="tv_main_ticket">MAIN TICKET</string>
+    <string name="tv_ticket_result">Ticket Result：</string>
+    <string name="tv_t_id">T. ID</string>
+    <string name="tv_phone">0772234576 / 0754329086</string>
+    <string name="tv_email">linkuganda@gmail.com</string>
+    <string name="tv_website">www.linkuganda.com</string>
+    <string name="tv_manual">Manual</string>
+    <string name="tv_quick_sale">Quick Sale</string>
+    <string name="tv_reports">Reports</string>
+    <string name="tv_scan">Scan</string>
+    <string name="tv_flash_light">Flash Light</string>
+    <string name="ok">ok</string>
+    <string name="from">From</string>
+    <string name="please_select_from_city">Please select from city.</string>
+    <string name="please_select_to_city">Please select to city.</string>
+    <string name="please_select_departure_date">Please select departure date.</string>
+    <string name="to">To</string>
+    <string name="bus_type">Select seat(s)</string>
+    <string name="more_than_5_seats">You can\'t select more than 5 seats!</string>
+
+    ////////////////////DEPARTURE ACTIVITY//////////////////////
+    <string name="terms_and_conditions">Terms &amp; Conditions</string>
+    <string name="refund_policy">Refund Policy</string>
+    <string name="no_refund_will_be_allowed_after">No refund will be allowed after</string>
+    <string name="baggage_policy">Baggage Policy</string>
+    <string name="luggage_carried_at_owner_s_risk">Luggage carried at owner\'s risk.</string>
+    <string name="departure_details">Departure Details</string>
+    <string name="seats">Seats</string>
+    <string name="amenities">Amenities</string>
+    <string name="select_seat">Make a Purchase</string>
+    <string name="book_seat">Book seat</string>
+    <string name="no_booking_found">No booking found !!</string>
+
+    <!--Passenger Activity-->
+    <string name="surname">Surname</string>
+    <string name="givenname">Given Name(s)</string>
+
+    <string name="birthday">Birthday</string>
+    <string name="gender">Gender</string>
+    <string name="male">M</string>
+    <string name="female">F</string>
+    <string name="id_type">ID Type</string>
+    <string name="id_number">ID Number</string>
+
+    <!--Cart Activity-->
+    <string name="cart">My Cart</string>
+    <string name="onward">Onward</string>
+    <string name="return_label">Return</string>
+    <string name="fees">Fees</string>
+    <string name="total">Total</string>
+    <string name="passengers">Passengers</string>
+    <string name="apply">Apply</string>
+    <string name="price">Price</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="full_name_middle_name"><![CDATA[Full name & Middle Name]]></string>
+    <string name="select_country">Select Country</string>
+    <string name="noti">Notification</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="help_faq"><![CDATA[Help & FAQ]]></string>
+    <string name="check_update">Check Update</string>
+
+    <string name="kacyber_security_technologies_ltd">KaCyber Security Technologies LTD.</string>
+    <string name="all_right_reserved">All Right Reserved</string>
+    <plurals name="passenger">
+        <item quantity="one">%d Passenger</item>
+        <item quantity="other">%d Passengers</item>
+        <item quantity="many">%d Passengers</item>
+        <item quantity="zero">No Passengers</item>
+    </plurals>
+    <string-array name="id_type">
+        <item>National ID</item>
+        <item>Passport</item>
+        <item>Driver’s License</item>
+        <item>Other Document</item>
+        <item>Student Id</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="payvia">
+        <item>Cash Payment</item>
+        <item>Mobile Money</item>
+        <item>PayPal</item>
+        <item>Africell Money</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

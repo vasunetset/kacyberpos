@@ -1,0 +1,114 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.kacyber.pos"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 18
+        multiDexEnabled true
+        versionName "1.17.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        release {
+            storeFile file("/home/netset/Desktop/Latest WorkSpace Naveen/Kacyber E-Ticket/Kacyber E-Ticket/app/eticket.jks")
+            storePassword "123456"
+            keyAlias "KaCyberPOS"
+            keyPassword "123456"
+        }
+    }
+
+    /*inno welcome123
+      booking welcome123*/
+
+    buildTypes {
+        release {
+            buildConfigField "String", "SERVER_URL", '"https://www.kacyber.com/"'
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+           // buildConfigField "String", "SERVER_URL", '"http://34.241.247.127:8001/"'// testing live
+            //buildConfigField "String", "SERVER_URL", '"http://192.168.2.40:8001/"'// testing local
+            //buildConfigField "String", "SERVER_URL", '"http://192.168.2.75:8000/"'// mam local
+            buildConfigField "String", "SERVER_URL", '"http://192.168.2.75:8000/"'// sir local
+            //buildConfigField "String", "SERVER_URL", '"https://www.kacyber.com/"'
+        }
+    }
+    /*password 123456
+    name KaCyberPOS*/
+    android {
+        packagingOptions {
+            exclude 'META-INF/DEPENDENCIES.txt'
+            exclude 'META-INF/LICENSE.txt'
+            exclude 'META-INF/NOTICE.txt'
+            exclude 'META-INF/NOTICE'
+            exclude 'META-INF/LICENSE'
+            exclude 'META-INF/DEPENDENCIES'
+            exclude 'META-INF/notice.txt'
+            exclude 'META-INF/license.txt'
+            exclude 'META-INF/dependencies.txt'
+            exclude 'META-INF/LGPL2.1'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':printCode')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.android.support:support-v4:27.1.1'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation 'junit:junit:4.12'
+    // android support
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.github.aakira:expandable-layout:1.6.0@aar'
+    // retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.3.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    implementation 'com.squareup.okhttp:okhttp-urlconnection:2.7.5'
+    implementation 'com.google.firebase:firebase-core:12.0.1'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.1'
+    implementation 'com.google.android.gms:play-services-places:12.0.1'
+    implementation 'me.dm7.barcodescanner:zxing:1.9.8'
+    // rx java
+    implementation 'io.reactivex:rxjava:1.3.0'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    // butter knife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor "com.jakewharton:butterknife-compiler:8.8.1"
+    // picasso
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    // BaseRecyclerViewAdapterHelper
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    // logger
+    implementation 'com.orhanobut:logger:1.15'
+    implementation 'com.github.joielechong:countrycodepicker:2.1.5'
+    //  crash
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.4'
+    ///phone no validation
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.8.9'
+    // country picker
+    implementation 'com.github.mukeshsolanki:country-picker-android:1.2.4'
+    implementation 'com.soundcloud.android:android-crop:1.0.1@aar'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    // firebase
+    implementation 'com.google.firebase:firebase-messaging:12.0.1'
+
+    implementation 'org.jsoup:jsoup:1.8.3'
+}
+
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <ScrollView
+        android:id="@+id/main_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="@string/onward"
+                android:textAllCaps="true"
+                android:textColor="@color/colorTextLight"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/onward_trip_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+
+                    android:layout_toStartOf="@+id/onward_chevron_image_view"
+                    tools:text="Kampala to Mbarara" />
+
+                <TextView
+                    android:id="@+id/busRoute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/onward_trip_text_view"
+                    android:layout_marginBottom="@dimen/standard_margin"
+                    android:layout_toStartOf="@+id/onward_chevron_image_view"
+                    android:textColor="@color/colorTextLight"
+                    tools:text="Kampala to Mbarara" />
+
+                <TextView
+                    android:id="@+id/onward_trip_date_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/busRoute"
+                    android:layout_toStartOf="@+id/onward_chevron_image_view"
+                    android:textColor="@color/colorTextLight"
+                    tools:text="Wed. 19th Jul 2017 12:00AM" />
+
+                <ImageView
+                    android:id="@+id/onward_chevron_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/chevron_right"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="@string/passengers"
+                android:textAllCaps="true"
+                android:textColor="@color/colorTextLight"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <com.kacyber.pos.util.NonScrollRecyclerView
+                android:id="@+id/passenger_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/double_margin"
+                android:background="@android:color/white"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/price_label_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/price" />
+
+                <TextView
+                    android:id="@+id/price_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/price_label_text_view"
+                    android:gravity="end"
+                    tools:text="UGX 15000" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/discountRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="Discount" />
+
+                <TextView
+                    android:id="@+id/discountTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/discount"
+                    android:gravity="end"
+                    tools:text="UGX 15000" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_fees"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@android:color/white"
+                android:padding="12dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/fees_label_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/fees"
+                    android:textColor="@color/colorAccent" />
+
+                <TextView
+                    android:id="@+id/fees_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/fees_label_text_view"
+                    android:gravity="end"
+                    android:textColor="@color/colorAccent"
+                    tools:text="UGX 5700" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@android:color/white"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/total_label_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/total" />
+
+                <TextView
+                    android:id="@+id/total_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/total_label_text_view"
+                    android:gravity="end"
+                    tools:text="UGX 20700" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@android:color/white"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/Payvia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="Pay via" />
+
+                <Spinner
+                    android:id="@+id/payViaspinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+
+                    android:entries="@array/payvia"
+                    android:minWidth="@dimen/dp_160"
+                    tools:listitem="@android:layout/simple_spinner_item" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/couponRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@android:color/white"
+                android:padding="12dp">
+
+                <EditText
+                    android:id="@+id/couponET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/applyTV"
+                    android:hint="Promo code"
+                    android:minWidth="@dimen/dp_160" />
+
+                <TextView
+                    android:id="@+id/applyTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:entries="@array/payvia"
+                    android:padding="@dimen/_5dp"
+                    android:text="Apply"
+                    tools:listitem="@android:layout/simple_spinner_item" />
+
+            </RelativeLayout>
+
+            <!--
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2">
+
+                            <ImageButton
+                                android:id="@+id/airtel_image_button"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:adjustViewBounds="true"
+                                android:background="@null"
+                                android:padding="@dimen/double_margin"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_money_mtn" />
+
+                            <ImageButton
+                                android:id="@+id/paypal_image_button"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:adjustViewBounds="true"
+                                android:background="@null"
+                                android:padding="@dimen/double_margin"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/paypal" />
+                        </LinearLayout>
+            -->
+            <Button
+                android:id="@+id/book_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/double_margin"
+                android:background="@drawable/button_orange"
+                android:text="@string/select_seat"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

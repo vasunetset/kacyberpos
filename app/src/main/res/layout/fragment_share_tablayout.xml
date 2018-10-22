@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.TabLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tab_layout"
+    android:layout_width="match_parent"
+    android:layout_height="54dp"
+    app:tabGravity="fill"
+    app:tabIndicatorHeight="2dp"
+    app:tabIndicatorColor="@color/common_btn_bg_color"
+    app:tabMode="scrollable"
+    app:tabSelectedTextColor="@color/common_btn_bg_color"
+    app:tabTextColor="@color/text_black"
+    app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget">
+
+</android.support.design.widget.TabLayout>

@@ -1,0 +1,4 @@
+#Mon Oct 22 15:13:04 IST 2018
+base.0=/home/netset/Desktop/Latest WorkSpace Naveen/Kacyber E-Ticket/Kacyber E-Ticket/app/build/intermediates/transforms/dexMerger/debug/60
+path.0=classes.dex
+renamed.0=classes.dex

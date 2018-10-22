@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorTheme">#3F51B5</color>
+    <color name="colorTextLight">#FFA9AEC2</color>
+    <color name="background_dialog">#5a000000</color>
+    <color name="text_gray_light">#bcbcbc</color>
+    <color name="text_gray">#ababab</color>
+    <color name="white">#ffffff</color>
+    <color name="text_black">#545454</color>
+    <color name="trans_00">#00FFFFFF</color>
+    <color name="gray_d0">#d0d0d0</color>
+    <color name="gray_8d">#8d8d8d</color>
+    <color name="black">#000000</color>
+    <color name="holo_dark_blue_light">#4236ff</color>
+    <color name="holo_dark_blue_tint">#657bfc</color>
+    <color name="holo_dark_blue_dark">#42368f</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c00008ff</color>
+    <color name="lineBackground">#999999</color>
+    <!--common mic_colorolor-->
+    <color name="transparent">#00000000</color>
+    <color name="White">#FFFFFF</color>
+    <color name="Black_trans">#A5000000</color>
+    <color name="common_text_color">#2e4485</color>
+    <color name="common_text_color_light">#4e73e1</color>
+    <color name="common_btn_bg_color">#F0A940</color>
+    <color name="common_btn_bg_color_pressed">#e69b24</color>
+    <color name="common_btn_border_color">#b5bbcb</color>
+    <color name="common_btn_text_color">#fff</color>
+    <color name="common_icon_color">#8893b4</color>
+    <color name="common_bg_color">#EFEEF4</color>
+    <color name="common_blue">#8893B4</color>
+    <color name="orange_Button">#F1A732</color>
+    <!--=================== new =======================-->
+
+    <color name="textColorPrimary">#333333</color>
+    <color name="textColorRed">#FF0000</color>
+
+    <!--=================== new =======================-->
+    <color name="profileBg">#F1F2F5</color>
+    <color name="light_grey">#f0eff3</color>
+
+</resources>

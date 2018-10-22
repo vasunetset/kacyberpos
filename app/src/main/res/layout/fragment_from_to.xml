@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_oval"
+                android:drawablePadding="@dimen/dp_13"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_10"
+                android:text="From"
+                android:textColor="@color/common_text_color"
+                android:textSize="@dimen/text_14" />
+
+            <EditText
+                android:id="@+id/place_from"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/select_city"
+                android:paddingBottom="@dimen/dp_15"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:paddingLeft="@dimen/dp_40"
+                android:paddingRight="@dimen/dp_15"
+                android:paddingTop="@dimen/dp_10"
+                android:textColorHint="@color/text_gray" />
+
+            <include
+                layout="@layout/common_line_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_oval_yellow"
+                android:drawablePadding="@dimen/dp_13"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_10"
+                android:text="To"
+                android:textColor="@color/common_btn_bg_color"
+                android:textSize="@dimen/text_14" />
+
+            <EditText
+                android:id="@+id/place_to"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/select_city"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                android:paddingBottom="@dimen/dp_15"
+                android:paddingLeft="@dimen/dp_40"
+                android:paddingRight="@dimen/dp_15"
+                android:paddingTop="@dimen/dp_10"
+                android:textColorHint="@color/text_gray" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btn_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="@dimen/dp_40"
+            android:background="@color/white"
+            android:padding="@dimen/dp_10"
+            android:src="@drawable/ic_change" />
+    </FrameLayout>
+
+    <include
+        layout="@layout/common_line_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dp_15"
+            android:text="@string/departure"
+            android:textColor="@color/common_text_color" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="right"
+            android:paddingBottom="@dimen/dp_15"
+            android:paddingRight="@dimen/dp_30"
+            android:paddingTop="@dimen/dp_15"
+            android:hint="@string/date"
+            android:textColor="@color/common_text_color" />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/common_line_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_1" />
+
+<!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dp_15"
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingTop="@dimen/dp_15"
+            android:text="@string/passenger"
+            android:textColor="@color/common_text_color" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5" />
+
+        <ImageView
+            android:id="@+id/subtract"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:src="@drawable/ic_rectangle_sec_copy_thd" />
+
+        <EditText
+            android:id="@+id/passenger_num"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/common_text_color" />
+
+        <ImageView
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_25"
+            android:src="@drawable/ic_combined_shape_copy_sec" />
+
+    </LinearLayout>
+-->
+</LinearLayout>

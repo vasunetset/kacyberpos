@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reportRL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/header2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_margin="@dimen/dp_10"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_5">
+
+                    <TextView
+                        android:id="@+id/totalTicketIssueTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/_5dp"
+                        tools:text="147000"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_18"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/texttotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/totalTicketIssueTV"
+                        android:layout_centerHorizontal="true"
+                        android:text="Total Tickets Issued"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_12" />
+
+                    <TextView
+                        android:id="@+id/bookedSeatTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/texttotal"
+                        android:layout_centerHorizontal="true"
+                        tools:text="500 Seat Booked"
+                        android:textColor="@color/colorTextLight"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_5">
+
+                    <TextView
+                        android:id="@+id/totalCancelTicketTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/_5dp"
+                        tools:text="20"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_18"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textcancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/totalCancelTicketTV"
+                        android:layout_centerHorizontal="true"
+                        android:text="Total Tickets Cancelled"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_12" />
+
+                    <TextView
+                        android:id="@+id/priceCancelAmtTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textcancel"
+                        android:layout_centerHorizontal="true"
+                        tools:text="UGX 50,00,000,00"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header2"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_5">
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dp_3"
+
+                        android:id="@+id/totalAmountTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        tools:text="UGX 147000"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/kesTotalTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/totalAmountTV"
+                        android:layout_marginTop="@dimen/dp_3"
+                        android:layout_centerHorizontal="true"
+                        tools:text="KES 5888,000,00"
+                        android:textColor="@color/colorTextLight"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/usdTotalTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/kesTotalTV"
+                        android:layout_marginTop="@dimen/dp_3"
+                        android:layout_centerHorizontal="true"
+                        tools:text="USD 5888,000,00"
+                        android:textColor="@color/colorTextLight"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/totalcollextedTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/usdTotalTV"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp_3"
+                        android:text="Total Amount Collected"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_12" />
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5dp">
+
+                    <TextView
+                        android:id="@+id/printedTotalTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        tools:text="120"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_16" />
+
+                    <TextView
+                        android:id="@+id/printed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/printedTotalTV"
+                        android:layout_centerHorizontal="true"
+                        android:text="Printed"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_12" />
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/printed"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/dp_4"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/verifiedTotalTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line"
+                        android:layout_centerHorizontal="true"
+                        tools:text="120"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_16" />
+
+                    <TextView
+                        android:id="@+id/verified"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/verifiedTotalTV"
+                        android:layout_centerHorizontal="true"
+                        android:text="Verified"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_12" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

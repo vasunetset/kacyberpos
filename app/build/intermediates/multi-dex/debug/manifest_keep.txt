@@ -1,0 +1,3 @@
+# Referenced at /home/netset/Desktop/Latest WorkSpace Naveen/Kacyber E-Ticket/Kacyber E-Ticket/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:48
+-keep class com.kacyber.pos.App { <init>(...); }
+

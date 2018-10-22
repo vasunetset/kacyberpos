@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/dep_background" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="?actionBarSize"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/company_name_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/standard_margin"
+                        android:textColor="@android:color/white"
+                        tools:text="Global Coaches" />
+
+                    <TextView
+                        android:id="@+id/price_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="32sp"
+                        tools:text="UGX 15000" />
+
+                    <TextView
+                        android:id="@+id/passengers_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/standard_margin"
+                        android:textColor="@android:color/white"
+                        tools:text="3 Passengers" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/date_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="@dimen/double_margin"
+                android:background="@android:color/white"
+                android:paddingBottom="@dimen/standard_margin"
+                android:paddingEnd="@dimen/double_margin"
+                android:paddingStart="@dimen/double_margin"
+                android:paddingTop="@dimen/standard_margin"
+                tools:text="Wed. 19th Jul 2017" />
+
+            <TextView
+                android:id="@+id/routeTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@android:color/white"
+                android:paddingBottom="@dimen/standard_margin"
+                android:paddingEnd="@dimen/double_margin"
+                android:paddingStart="@dimen/double_margin"
+                android:textSize="@dimen/sp_16"
+                tools:text="" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/double_margin"
+                android:background="@android:color/white"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:padding="@dimen/standard_margin"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:id="@+id/departure_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/departure_city_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/half_margin"
+                        android:textSize="14sp"
+                        tools:text="Kampala" />
+
+                    <TextView
+                        android:id="@+id/departure_time_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/half_margin"
+                        android:textSize="18sp"
+                        tools:text="12:00 AM" />
+
+                    <TextView
+                        android:id="@+id/departure_location_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/half_margin"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/colorTextLight"
+                        android:textSize="14sp"
+                        tools:text="Kabuli Bus Terminal" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="@dimen/standard_margin">
+
+                    <TextView
+                        android:id="@+id/trip_duration_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/line_view"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/half_margin"
+                        android:gravity="center"
+                        tools:text="2H 10M" />
+
+                    <View
+                        android:id="@+id/line_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_centerInParent="true"
+                        android:background="@color/colorPrimary" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/destination_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/destination_city_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/half_margin"
+                        android:textSize="14sp"
+                        tools:text="Mbarara" />
+
+                    <TextView
+                        android:id="@+id/destination_time_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/half_margin"
+                        android:textSize="18sp"
+                        tools:text="2:10 PM" />
+
+                    <TextView
+                        android:id="@+id/destination_location_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/half_margin"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/colorTextLight"
+                        android:textSize="14sp"
+                        tools:text="Bus Park Rd" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/amenities_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selectable_white_background"
+                android:clickable="true"
+                android:padding="@dimen/double_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/amenities_chevron"
+                    android:drawablePadding="@dimen/double_margin"
+                    android:drawableStart="@drawable/ameniti"
+                    android:gravity="center_vertical"
+                    android:text="@string/amenities" />
+
+                <ImageView
+                    android:id="@+id/amenities_chevron"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:rotation="90"
+                    android:src="@drawable/chevron_right" />
+            </RelativeLayout>
+
+            <com.github.aakira.expandablelayout.ExpandableLinearLayout
+                android:id="@+id/amenities_expandable_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                app:ael_duration="200"
+                app:ael_expanded="true"
+                app:ael_interpolator="accelerate">
+
+                <LinearLayout
+                    android:id="@+id/amenitiesLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_5dp" />
+
+            </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/terms_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:background="@drawable/selectable_white_background"
+                android:padding="@dimen/double_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/terms_chevron"
+                    android:drawablePadding="@dimen/double_margin"
+                    android:drawableStart="@drawable/info"
+                    android:gravity="center_vertical"
+                    android:text="@string/terms_and_conditions" />
+
+                <ImageView
+                    android:id="@+id/terms_chevron"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:rotation="270"
+                    android:src="@drawable/chevron_right" />
+            </RelativeLayout>
+
+            <com.github.aakira.expandablelayout.ExpandableLinearLayout
+                android:id="@+id/terms_expandable_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                app:ael_duration="200"
+                app:ael_expanded="true"
+                app:ael_interpolator="accelerate">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/double_margin">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/half_margin"
+                        android:text="@string/refund_policy" />
+
+                    <TextView
+                        android:id="@+id/refundPolicyTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_refund_will_be_allowed_after"
+                        android:textColor="@color/colorTextLight" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/double_margin">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/half_margin"
+                        android:text="@string/baggage_policy" />
+
+                    <TextView
+                        android:id="@+id/baggagePolicyTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/luggage_carried_at_owner_s_risk"
+                        android:textColor="@color/colorTextLight" />
+                </LinearLayout>
+            </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+
+            <Button
+                android:id="@+id/book_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/double_margin"
+                android:background="@drawable/button_orange"
+                android:text="@string/select_seat"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>

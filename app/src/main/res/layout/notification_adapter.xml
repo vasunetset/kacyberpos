@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:layout_margin="@dimen/dp_8"
+        android:background="@drawable/ic_bus" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toEndOf="@+id/circleImageView">
+
+        <TextView
+            android:id="@+id/busName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bus name"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_5dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:text="20/07/2018"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_8" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/busName"
+            android:text="Notification text "
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+
+            <TableRow
+                android:layout_marginBottom="1dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="52dp"
+                android:padding="@dimen/standard_margin">
+
+                <TextView
+                    android:layout_marginEnd="@dimen/standard_margin"
+                    android:text="@string/surname" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/surnameET"
+                    android:hint="@string/surname"
+                    android:inputType="textCapWords"
+                    app:backgroundTint="@android:color/transparent" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="1dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="52dp"
+                android:padding="@dimen/standard_margin">
+
+                <TextView
+                    android:layout_marginEnd="@dimen/standard_margin"
+                    android:text="@string/givenname" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/givenNameET"
+                    android:hint="@string/full_name_middle_name"
+                    android:inputType="textCapWords"
+                    app:backgroundTint="@android:color/transparent" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="1dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="52dp"
+                android:padding="@dimen/standard_margin">
+
+                <TextView
+                    android:layout_marginEnd="@dimen/standard_margin"
+                    android:text="@string/birthday" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/birthday_edit_text"
+                    android:focusable="false"
+                    android:hint="@string/birthday"
+                    app:backgroundTint="@android:color/transparent" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="1dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="52dp"
+                android:padding="@dimen/standard_margin">
+
+                <TextView
+                    android:layout_marginEnd="@dimen/standard_margin"
+                    android:text="@string/gender" />
+
+                <RadioGroup
+                    android:id="@+id/gender_radio_group"
+                    android:checkedButton="@+id/male_radio_button"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/male_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="48dp"
+                        android:button="@null"
+                        android:drawableEnd="@drawable/check_box"
+                        android:drawablePadding="@dimen/double_margin"
+                        android:paddingStart="@dimen/_5dp"
+                        android:text="@string/male"
+                        android:textColor="@color/colorAccent" />
+
+                    <RadioButton
+                        android:id="@+id/female_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableEnd="@drawable/check_box"
+                        android:drawablePadding="@dimen/double_margin"
+                        android:text="@string/female"
+                        android:textColor="@color/colorTextLight" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="1dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="52dp"
+                android:padding="@dimen/standard_margin">
+
+                <TextView
+                    android:layout_marginEnd="@dimen/standard_margin"
+                    android:text="Country" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/countryET"
+                    android:focusable="false"
+                    android:hint="@string/select_country"
+                    app:backgroundTint="@android:color/transparent" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="1dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="52dp"
+                android:padding="@dimen/standard_margin">
+
+                <TextView
+                    android:layout_marginEnd="@dimen/standard_margin"
+                    android:text="@string/id_type" />
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/id_type_edit_Spinne"
+                    android:entries="@array/id_type"
+                    android:hint="@string/id_type"
+                    tools:listitem="@android:layout/simple_spinner_item" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="1dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="52dp"
+                android:padding="@dimen/standard_margin">
+
+                <TextView
+                    android:layout_marginEnd="@dimen/standard_margin"
+                    android:text="@string/id_number" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/id_number_edit_text"
+                    android:layout_weight="1.6"
+                    android:hint="@string/id_number"
+                    android:paddingStart="@dimen/_5dp"
+                    app:backgroundTint="@android:color/transparent" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="1dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:minHeight="52dp"
+                android:padding="@dimen/standard_margin">
+
+                <TextView
+                    android:layout_marginEnd="@dimen/standard_margin"
+                    android:text="@string/phone_number" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:gravity="center"
+                        android:text="256"
+                        android:visibility="gone"
+                        app:backgroundTint="@android:color/transparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:orientation="horizontal"
+                        android:padding="3dp"
+                        android:weightSum="1">
+
+                        <com.rilixtech.CountryCodePicker
+                            android:id="@+id/countryCode"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5dp"
+                            android:layout_weight="0.4"
+                            app:ccp_defaultCode="256"
+                            app:ccp_defaultNameCode="UG"
+                            app:ccp_showFlag="false"
+                            app:ccp_textSize="14sp" />
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/phone_number_edit_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:hint="@string/phone_number"
+                            android:maxLength="12"
+                            android:inputType="phone"
+                            android:paddingStart="@dimen/_5dp"
+                            app:backgroundTint="@android:color/transparent" />
+                    </LinearLayout>
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>
