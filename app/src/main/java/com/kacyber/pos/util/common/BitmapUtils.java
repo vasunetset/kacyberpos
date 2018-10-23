@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.graphics.Rect;
 import android.view.View;
 
 /**
@@ -94,6 +95,43 @@ public class BitmapUtils {
             }
         }
         return newBitmap;
+    }
+
+    public static Bitmap binarizationWhiteBg(Bitmap bitmap) {
+        int width = bitmap.getWidth();
+        int height = bitmap.getHeight();
+
+        // Turn the picture black and white
+        //    Bitmap newBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565);
+        Bitmap newBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(newBitmap);
+        canvas.drawBitmap(bitmap, new Matrix(), new Paint());
+
+        int currentColor, red, green, blue, alpha, avg = 0;
+        for (int i = 0; i < width; i++) {
+            for (int j = 0; j < height; j++) {
+                //获得每一个位点的颜色
+                currentColor = bitmap.getPixel(i, j);
+                //获得三原色
+                red = Color.red(currentColor);
+                green = Color.green(currentColor);
+                blue = Color.blue(currentColor);
+                alpha = Color.alpha(currentColor);
+                avg = (red + green + blue) / 3;
+                if (avg >= 210) {
+                    newBitmap.setPixel(i, j, Color.argb(alpha, 255, 255, 255));// white
+                } else {
+                    newBitmap.setPixel(i, j, Color.argb(alpha, 0, 0, 0));// black
+                }
+            }
+        }
+        Bitmap bmp = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+        Canvas newCanvas = new Canvas(bmp);
+        Paint p = new Paint();
+        p.setColor(Color.WHITE);
+        newCanvas.drawRect(new Rect(0, 0, width, height), p);
+        newCanvas.drawBitmap(newBitmap, new Matrix(), new Paint());
+        return bmp;
     }
 
     /**

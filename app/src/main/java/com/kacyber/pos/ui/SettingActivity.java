@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.kacyber.pos.R;
+import com.kacyber.pos.devices.DeviceManager;
 import com.kacyber.pos.ui.base.BaseActivity;
 import com.kacyber.pos.util.Const;
 import com.kacyber.pos.util.GetVersionCode;
@@ -28,6 +29,8 @@ public class SettingActivity extends BaseActivity {
     TextView mVersionCode;
     private Intent intent;
     private int version;
+    @BindView(R.id.printersRL)
+    View mPrintersView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +48,9 @@ public class SettingActivity extends BaseActivity {
 
     @Override
     protected void initView(Bundle savedInstanceState) {
-
+        if (DeviceManager.getInstance().hasPrinter()) {
+            findViewById(R.id.printersRL).setVisibility(View.GONE);
+        }
     }
 
     private void setupActionBar() {
@@ -65,7 +70,8 @@ public class SettingActivity extends BaseActivity {
         return super.onOptionsItemSelected(item);
     }*/
 
-    @OnClick({R.id.NotificationRL, R.id.cleaCacheRL, R.id.privacyRL, R.id.privacyPolicyRL, R.id.termsOfsericeRL, R.id.helpRL, R.id.checkUpdateRL, R.id.signOutBT})
+    @OnClick({R.id.NotificationRL, R.id.cleaCacheRL, R.id.privacyRL, R.id.privacyPolicyRL,
+            R.id.termsOfsericeRL, R.id.helpRL, R.id.checkUpdateRL, R.id.signOutBT, R.id.printersRL})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.NotificationRL:
@@ -113,6 +119,10 @@ public class SettingActivity extends BaseActivity {
                 Intent intent = new Intent();
                 setResult(RESULT_OK, intent);
                 finish();
+                break;
+            case R.id.printersRL:
+                Intent serverIntent = new Intent(this, BluetoothDeviceListActivity.class);
+                startActivity(serverIntent);
                 break;
         }
     }

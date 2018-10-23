@@ -153,9 +153,39 @@
     <string name="terms_of_service">Terms of Service</string>
     <string name="help_faq"><![CDATA[Help & FAQ]]></string>
     <string name="check_update">Check Update</string>
+    <string name="printers">Select Devices</string>
 
     <string name="kacyber_security_technologies_ltd">KaCyber Security Technologies LTD.</string>
     <string name="all_right_reserved">All Right Reserved</string>
+
+    <string name="scanning">Scanning for devices...</string>
+    <string name="printer_not_ready">The printer is not ready!</string>
+    <string name="select_device">Select Devices</string>
+    <string name="none_paired">No devices has been paired</string>
+    <string name="has_paired">paired</string>
+    <string name="not_paired">not paired</string>
+    <string name="selected">selected</string>
+    <string name="rePaire_connect">Re-pair And Connect</string>
+    <string name="unpair">Unpair</string>
+    <string name="paire_connect">Pair And Connect</string>
+    <string name="connect_paired">Connect</string>
+    <string name="select_options">Select Options</string>
+    <string name="none_found">No devices found</string>
+    <string name="no_bounded_device">Don\'t found device which name start with %s</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for new devices</string>
+    <string name="bluetooth_disabled">Bluetooth Disabled!</string>
+    <string name="not_connected">Please Connect BT Printer. (Menu-&amp;gt;Connect)</string>
+    <string name="bt_not_enabled">Bluetooth is not available</string>
+    <string name="bt_has_on">Bluetooth has opened</string>
+    <string name="bt_has_off">Bluetooth has closed</string>
+    <string name="bt_connecting">Bluetooth connecting...</string>
+    <string name="bt_connect_success">Bluetooth connect success</string>
+    <string name="bt_connect_failed">Bluetooth connect failed</string>
+    <string name="bt_connect_closed">Bluetooth connect has closed</string>
+    <string name="bt_print_success">Print Success</string>
+    <string name="bt_print_failed">Print Failed</string>
     <plurals name="passenger">
         <item quantity="one">%d Passenger</item>
         <item quantity="other">%d Passengers</item>
@@ -176,7 +206,15 @@
         <item>PayPal</item>
         <item>Africell Money</item>
     </string-array>
-
+    <string name="toast_1">Transaction print,use the AIDL mode!</string>
+    <string name="toast_2">The service has been disconnected!</string>
+    <string name="toast_3">Bluetooth device is unavailable</string>
+    <string name="toast_4">Bluetooth device not detected. Please open Bluetooth!</string>
+    <string name="toast_5">Not Found InnterPrinter!</string>
+    <string name="toast_6">Bluetooth connect failed!</string>
+    <string name="toast_7"> Only a single Qr code is printed for the AIDL mode</string>
+    <string name="toast_8">Now QrCode size must be less than 7!</string>
+    <string name="toast_9">BarCode type or conent error!</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

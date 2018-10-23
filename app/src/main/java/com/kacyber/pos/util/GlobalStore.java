@@ -26,6 +26,7 @@ public class GlobalStore {
         public static final String KEY_PASSWORD = "password";
         public static final String KEY_LOGIN_INFO = "login_info";
         public static final String KEY_USER = "user";
+        public static final String KEY_BLUETOOTH_ADDRESS = "key_bluetooth_adress";
     }
 
     /**
@@ -199,6 +200,15 @@ public class GlobalStore {
         String json = PreferencesUtils.getString(context, Constant.KEY_USER);
         User user = GsonUtils.fromJson(json, User.class);
         return user;
+    }
+
+
+    public static void saveBluetoothAddress(Context context, String address) {
+        PreferencesUtils.putString(context, Constant.KEY_BLUETOOTH_ADDRESS, address);
+    }
+
+    public static String getBluetoothAddress(Context context) {
+        return PreferencesUtils.getString(context, Constant.KEY_BLUETOOTH_ADDRESS, "");
     }
 
 }

@@ -149,6 +149,31 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/printersRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/printers"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_margin="@dimen/dp_8"
+            android:background="@drawable/ic_clear_cache" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_toEndOf="@+id/printers"
+            android:text="@string/printers"
+            android:textColor="@color/colorPrimaryDark" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:id="@+id/checkUpdateRL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

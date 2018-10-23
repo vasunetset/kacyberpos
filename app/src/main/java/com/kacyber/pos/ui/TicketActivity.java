@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.google.gson.JsonObject;
 import com.kacyber.pos.R;
+import com.kacyber.pos.devices.DeviceManager;
 import com.kacyber.pos.entity.QuickSale;
 import com.kacyber.pos.entity.Ticket;
 import com.kacyber.pos.entity.response.TicketInfoRes;
@@ -25,8 +26,7 @@ import com.kacyber.pos.ui.base.BaseActivity;
 import com.kacyber.pos.util.DialogHelper;
 import com.kacyber.pos.util.GlobalStore;
 import com.kacyber.pos.util.common.BitmapUtils;
-import com.kacyber.pos.util.common.PrintHelper;
-import com.squareup.picasso.Picasso;
+import com.kacyber.pos.util.common.ToastUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -317,6 +317,10 @@ public class TicketActivity extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_print:
+                if (!DeviceManager.getInstance().getPrinter().isReady()) {
+                    ToastUtils.show(R.string.printer_not_ready);
+                    return;
+                }
                 try {
                     DialogHelper.showLoadingDialog(TicketActivity.this, getString(R.string.toast_printing));
                     for (int i = 0; i < 2; i++) {
@@ -340,14 +344,14 @@ public class TicketActivity extends BaseActivity {
                             }, 5);
                         }
                     }
+
                     hitPrintApi();
+
                     viewTicketLayout.postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             totalBitmap = BitmapUtils.combineBitmap(mainTicketBitmap, subTicketBitmap);
-                            Bitmap binarizationBitmap = BitmapUtils.binarization(totalBitmap);
-                            Bitmap resizeBitmap = PrintHelper.resize(binarizationBitmap);
-                            PrintHelper.getInstance().startPrint(resizeBitmap);
+                            DeviceManager.getInstance().getPrinter().printImage(totalBitmap);
                         }
                     }, 50);
 
@@ -394,5 +398,6 @@ public class TicketActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         // TODO: add setContentView(...) invocation
         ButterKnife.bind(this);
+        DeviceManager.getInstance().getPrinter().init();
     }
 }
